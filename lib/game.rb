@@ -42,9 +42,13 @@ class Game
 
   def get_names
     system 'clear'
-    print "Un premier joueur dessine son symbole sur une case.
-  Puis c'est au tour de l'autre joueur de dessiner son symbole sur une case vide.
-  Le but du jeu est de réussir à aligner ses trois symboles, on remporte alors la partie.\n\n"
+  puts "
+    |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|
+    |     Bienvenue sur the ULTIMATE MORPION 2022    |
+    |Le but du jeu est d'aligner ses trois symboles! |
+    |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|
+    "
+     print "Un premier joueur dessine son symbole sur une case. Puis c'est au tour de l'autre joueur de dessiner son symbole sur une case vide.\n\n"
     puts "Nom du Joueur qui aura pour symbole X: "
     name1 = gets.chomp
     puts "Nom du Joueur qui aura pour symbole O: "
