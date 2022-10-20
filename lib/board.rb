@@ -18,9 +18,10 @@ class Board
       return false
     end
   end
-#permet de limiter cette méthode à la classe Board
-#Permet de remplacer les cellules par le signe du joueur en checkant si elles
+
+#remplace les cellules par le signe du joueur si elles
 #sont vides, sinon la cellule n'est pas complétée
+  
   def show_board
     hline = "\u2502"
     vline = "\u2500"

@@ -7,7 +7,7 @@ class Game
     @winner = false
     @turn = 0
   end
-#Méthode permettant de lancer le jeu et de démarrer la partie et déterminer l'issue de la partie. On crée de nouveaux joueurs avec des noms récupérés de la méthode 'get_names'.
+#Mde démarrer la partie et décider de l'issue de la partie. 
   def start_game
     names = get_names
     @player1 = Player.new(names[0], :X, @board)
@@ -18,11 +18,11 @@ class Game
     if @winner
       puts "BRAVO!!! #{@winner.name} A GAGNÉ!"
     else
-      puts "rejouez!"
+      puts "LOSERS! Personne ne gagne"
     end
   end
 
- #le jouer peut entrer un nombre compris entre 1 et 9, si le nombre n'est pas compris dans cet intervalle un message s'affiche demandant de redonner une valeur.
+ #le jouer peut entrer un nombre compris entre 1 et 9 
   def turn
     puts "Au tour de #{@current_player.name}. Choisis ta case (1-9): "
     choice = gets.chomp.to_i
@@ -34,7 +34,7 @@ class Game
       switch_player
     end
   end
-# Méthode permettant de mettre en place les changement de joueur
+#  mettre en place les changement de joueur
   def switch_player
     @current_player = @current_player == @player1 ? @player2 : @player1
   end
